@@ -41,6 +41,15 @@
 		.bindPopup('Abastecedor San Martín')
 		.openPopup();
 
+  var polygonLatLon = [[9.974183, -84.080958],[9.974183, -84.080958],[9.973405, -84.081819],[9.974981, -84.084486],[9.975658, -84.084603]];
+  var polylineLatLon = [[9.974183, -84.080958],[9.974183, -84.080958],[9.973405, -84.081819],[9.973255, -84.083802]];
+
+  var polygon = L.polygon(polygonLatLon, {color: 'red'}).addTo(map);
+    // zoom the map to the polygon
+  var polyline = L.polyline(polylineLatLon, {color: 'blue'}).addTo(map);
+  map.fitBounds(polygon.getBounds());
+
+
 
 </script>
 
